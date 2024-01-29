@@ -40,11 +40,11 @@ public class KeycodeDoorLock {
     }
 
     public void reset() {
-        if (!locked) {
-            System.out.println("Cannot reset while the door is unlocked.");
+        if(locked) {
+            System.out.println("Cannot reset while the door is locked.");
         } else {
             Scanner scanner = new Scanner(System.in);
-            System.out.print("Enter new Answer Code: ");
+            System.out.print("New Answer Code: ");
             String newCode = scanner.nextLine();
             this.answer = newCode;
             System.out.println("Answer Code set successfully.");
